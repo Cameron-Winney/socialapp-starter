@@ -12,11 +12,7 @@ class Home extends React.Component {
       super(props)
       this.state = {
         isVerified: false
-      };
-      this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
-    }
-    recaptchaLoaded() {
-      console.log("reCAPTCHA loaded")
+      }
     }
   
   render() {
@@ -40,10 +36,11 @@ class Home extends React.Component {
           </div>
           </div>
         </div>
-        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
-        render="explicit"
-        onloadCallback={this.recaptchaLoaded}
-        />
+        <div>      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };</div>
       </div>
     );
   }

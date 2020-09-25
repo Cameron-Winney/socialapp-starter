@@ -1,5 +1,6 @@
 import React from "react";
 import Spinner from "react-spinkit";
+import Recaptcha from 'react-google-recaptcha'
 import { withAsyncAction } from "../../redux/HOCs";
 import "./RegistrationForm.css";
 import DataService from "../../services/DataService";
@@ -11,6 +12,7 @@ class RegistrationForm extends React.Component {
       username: "",
       password: "",
       displayName: "",
+      
     };
 
     this.client = new DataService()

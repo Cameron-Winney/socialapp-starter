@@ -8,17 +8,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 
 class Home extends React.Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        isVerified: false
-      };
-      this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
-    }
-    recaptchaLoaded() {
-      console.log("reCAPTCHA loaded")
-    }
-  
   render() {
     return (
       <div className="container background-grey">
@@ -40,10 +29,6 @@ class Home extends React.Component {
           </div>
           </div>
         </div>
-        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
-        render="explicit"
-        onloadCallback={this.recaptchaLoaded}
-        />
       </div>
     );
   }

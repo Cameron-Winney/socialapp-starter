@@ -12,11 +12,11 @@ class Home extends React.Component {
       super(props)
       this.state = {
         isVerified: false
-      };
+      }
       this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
     }
     recaptchaLoaded() {
-      console.log("reCAPTCHA loaded")
+      console.log(reCAPTCHA loaded)
     }
   
   render() {
@@ -40,9 +40,9 @@ class Home extends React.Component {
           </div>
           </div>
         </div>
-        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
+        <Recaptcha sitekey="6Le-gNAZAAAAAGNiZx6RHLJqQtIFzhepb0U3xm9L"
         render="explicit"
-        onloadCallback={this.recaptchaLoaded}
+        onloadCallback={callback}
         />
       </div>
     );
