@@ -1,6 +1,6 @@
 {
   "name": "socialapp-starter",
-  "homepage": "http://marcusmerrick.github.io/socialapp-starter",
+  "homepage": "http://marcusmerrick.github.io/socialapp-starter"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "social-"
     "build:graph-html": "depcruise --validate .dependency-cruiser.js --exclude '^node_modules' --output-type dot src | dot -T svg > dependencygraph.html"
   },
   "eslintConfig": {
