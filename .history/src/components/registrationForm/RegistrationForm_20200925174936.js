@@ -63,7 +63,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
+                  <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
         render="explicit"
         onloadCallback={this.recaptchaLoaded}
         />

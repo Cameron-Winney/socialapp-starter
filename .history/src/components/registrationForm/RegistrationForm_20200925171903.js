@@ -13,15 +13,11 @@ class RegistrationForm extends React.Component {
       username: "",
       password: "",
       displayName: "",
-      isVerified: false
     };
 
     this.client = new DataService()
   }
 
-      recaptchaLoaded() {
-      console.log("reCAPTCHA loaded")
-    }
   handleRegistration = e => {
     e.preventDefault();
     this.client.registerUser(this.state).then(result => {
@@ -63,11 +59,8 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
-        render="explicit"
-        onloadCallback={this.recaptchaLoaded}
-        />
-          <button type="submit" reCAPTCHA='true' disabled={loading}>
+          
+          <button type="submit" disabled={loading}>
             Register
           </button>
         </form>

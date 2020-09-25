@@ -4,11 +4,21 @@ import Menu from "../components/menu/Menu";
 import { userIsNotAuthenticated } from "../redux/HOCs";
 import RegistrationForm from "../components/registrationForm/RegistrationForm";
 import "../styles.css";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 class Home extends React.Component {
- 
+    constructor(props) {
+      super(props)
+      this.state = {
+        isVerified: false
+      };
+      this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    }
+    recaptchaLoaded() {
+      console.log("reCAPTCHA loaded")
+    }
+  
   render() {
     return (
       <div className="container background-grey">
@@ -27,9 +37,13 @@ class Home extends React.Component {
           <div className="offset-sm-4 col-4">
           <h3>Register</h3>
           <RegistrationForm />
-          </div>
+          </div>her
           </div>
         </div>
+        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
+        render="explicit"
+        onloadCallback={this.recaptchaLoaded}
+        />
       </div>
     );
   }

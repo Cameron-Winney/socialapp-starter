@@ -8,7 +8,9 @@ import "../styles.css";
 
 
 class Home extends React.Component {
- 
+
+
+  
   render() {
     return (
       <div className="container background-grey">
@@ -30,6 +32,10 @@ class Home extends React.Component {
           </div>
           </div>
         </div>
+        <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
+        render="explicit"
+        onloadCallback={this.recaptchaLoaded}
+        />
       </div>
     );
   }
