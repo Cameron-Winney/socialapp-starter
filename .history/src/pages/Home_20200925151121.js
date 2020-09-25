@@ -5,8 +5,6 @@ import Cap from "../components/reCAPTCHA/ReCAPTCHAForm"
 import { userIsNotAuthenticated } from "../redux/HOCs";
 import RegistrationForm from "../components/registrationForm/RegistrationForm";
 import "../styles.css";
-import ReCAPTCHA from "react-google-recaptcha";
-import ReCAPTCHAForm from "../components/reCAPTCHA/ReCAPTCHAForm";
 
 
 class Home extends React.Component {
@@ -27,7 +25,8 @@ class Home extends React.Component {
           <Cap />
           </div>
           <div className="offset-sm-4 col-4">
-          <h3>Register</h3>
+            <Rec
+            <h3>Register</h3>
           <RegistrationForm />
           </div>
           </div>

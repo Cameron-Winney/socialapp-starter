@@ -26,8 +26,7 @@ class Home extends React.Component {
           <LoginForm />
           <Cap />
           </div>
-          <div className="offset-sm-4 col-4">
-          <h3>Register</h3>
+          <div className="offset-sm-4 col-4"<h3>Register</h3>
           <RegistrationForm />
           </div>
           </div>

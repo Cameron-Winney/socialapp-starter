@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import "./LoginForm.css";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -21,6 +21,10 @@ class LoginForm extends React.Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   render() {
     const { loading, error } = this.props;

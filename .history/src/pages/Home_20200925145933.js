@@ -1,12 +1,10 @@
 import React from "react";
 import LoginForm from "../components/loginForm/LoginForm";
 import Menu from "../components/menu/Menu";
-import Cap from "../components/reCAPTCHA/ReCAPTCHAForm"
+import Cap from "../components/reCAPTCHA/Cap"
 import { userIsNotAuthenticated } from "../redux/HOCs";
 import RegistrationForm from "../components/registrationForm/RegistrationForm";
 import "../styles.css";
-import ReCAPTCHA from "react-google-recaptcha";
-import ReCAPTCHAForm from "../components/reCAPTCHA/ReCAPTCHAForm";
 
 
 class Home extends React.Component {
@@ -24,10 +22,10 @@ class Home extends React.Component {
           <div className="row">
             <div className="col-4">
           <LoginForm />
-          <Cap />
+          <
           </div>
           <div className="offset-sm-4 col-4">
-          <h3>Register</h3>
+            <h3>Register</h3>
           <RegistrationForm />
           </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import "./LoginForm.css";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
       username: "",
       password: "",
     };
+    const recaptchaRef = React.createRef();
   }
 
   handleLogin = (e) => {
@@ -21,6 +22,12 @@ class LoginForm extends React.Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  onSubmit = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  }
+
+  
 
   render() {
     const { loading, error } = this.props;

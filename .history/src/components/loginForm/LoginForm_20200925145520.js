@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import "./LoginForm.css";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
       username: "",
       password: "",
     };
+    const recaptchaRef = React.createRef();
   }
 
   handleLogin = (e) => {
@@ -21,11 +22,35 @@ class LoginForm extends React.Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  onSubmit = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  }
+
+  ReactDOM.render(
+    <form onSubmit={() => { recaptchaRef.current.execute(); }}>
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        size="invisible"
+        sitekey="Your client site key"
+        onChange={onChange}
+      />
+    </form>,
+    document.body
+  );
 
   render() {
     const { loading, error } = this.props;
     return (
       <div className="LoginForm">
+        <form onSubmit={this.onSubmit} >
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey="6Le-gNAZAAAAAKiDukQHfyy1ncdtj2u91qBL2ewb
+        "
+        onChange={onChange}
+      />
+    </form>
         <h3>Login</h3>
 
         <form id="login-form" onSubmit={this.handleLogin}>
