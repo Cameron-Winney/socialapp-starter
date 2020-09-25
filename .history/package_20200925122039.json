@@ -1,6 +1,6 @@
 {
   "name": "socialapp-starter",
-  "homepage": "https://marcusmerrick.github.io/socialapp-starter",
+  "homepage": "git!marcusmerrick.github.io/socialapp-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
