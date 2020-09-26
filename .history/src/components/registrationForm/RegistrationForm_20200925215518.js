@@ -50,7 +50,7 @@ class RegistrationForm extends React.Component {
           <input
             type="text"
             name="username"
-            placeholder="Make It Unique"
+            placeholder=""
             autoFocus
             required
             onChange={this.handleChange}

@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
           <input
             type="text"
             name="username"
-            placeholder="Your Username"
+            placeholder="Something No One Else Has Used"
             autoFocus
             required
             onChange={this.handleChange}
@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
           <input
             type="password"
             name="password"
-            placeholder="Your Password"
+            placeholder="Make it "
             required
             onChange={this.handleChange}
           />

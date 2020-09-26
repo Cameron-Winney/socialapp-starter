@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
           <input
             type="password"
             name="password"
-            placeholder="Your Password"
+            placeholder="Make It Unique"
             required
             onChange={this.handleChange}
           />
