@@ -77,7 +77,6 @@ class RegistrationForm extends React.Component {
         onloadCallback={this.recaptchaLoaded}
         onChange={this.enableButton}
         />
-        <br />
           <button id='btn' type="submit" disabled="true">
             Register
           </button>

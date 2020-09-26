@@ -61,7 +61,7 @@ class LoginForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <br />
+          <br
           <ReCAPTCHA sitekey="6LcniNAZAAAAAFTxaLpKdtfKDA3wUiA1tDjXg1lB"
           render="explicit"
           onloadCallback={this.recaptchaLoaded}
