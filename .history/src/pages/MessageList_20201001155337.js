@@ -16,7 +16,7 @@ class MessageList extends React.Component {
     if (this.state.messages.length === 0) {
       return (
         <div className="MessageList">
-          <Menu isAuthenticated={this.props.isAuthenticated} />
+          
           <h1>MessageList</h1>
           <h3>Loading...</h3>
         </div>

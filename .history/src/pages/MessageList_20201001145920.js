@@ -1,7 +1,6 @@
 import React from "react";
 import Menu from "../components/menu/Menu";
 import api from "../services/BackendService";
-import Message from "../components/Message/Message";
 
 class MessageList extends React.Component {
   state = { messages: [] };
@@ -16,7 +15,6 @@ class MessageList extends React.Component {
     if (this.state.messages.length === 0) {
       return (
         <div className="MessageList">
-          <Menu isAuthenticated={this.props.isAuthenticated} />
           <h1>MessageList</h1>
           <h3>Loading...</h3>
         </div>
@@ -25,12 +23,10 @@ class MessageList extends React.Component {
 
     return (
       <div className="MessageList">
-        <Menu isAuthenticated={this.props.isAuthenticated} />
+        <Menu />
         <h1>Message Feed</h1>
         <ul>
-          {this.state.messages.map((messageObject) => (
-            <Message key={messageObject.id} {...messageObject} />
-          ))}
+          {this.state.messages.map(messageObject => return <)}
         </ul>
       </div>
     );

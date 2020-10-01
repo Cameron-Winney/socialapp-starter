@@ -25,7 +25,7 @@ class MessageList extends React.Component {
 
     return (
       <div className="MessageList">
-        <Menu isAuthenticated={this.props.isAuthenticated} />
+        <Menu />
         <h1>Message Feed</h1>
         <ul>
           {this.state.messages.map((messageObject) => (
