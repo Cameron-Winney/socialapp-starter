@@ -1,6 +1,5 @@
 import React from "react";
 import Menu from "../components/menu/Menu";
-import { userIsAuthenticated } from "../redux/HOCs";
 import api from "../services/BackendService";
 import Message from "../components/Message/Message";
 
@@ -15,7 +14,7 @@ class MessageList extends React.Component {
 
   render() {
     if (this.state.messages.length === 0) {
-      
+      <Menu isAuthenticated={this.props.isAuthenticated} />
       return (
         <div className="MessageList">
           <Menu isAuthenticated={this.props.isAuthenticated} />

@@ -1,6 +1,5 @@
 import React from "react";
 import Menu from "../components/menu/Menu";
-import { userIsAuthenticated } from "../redux/HOCs";
 import api from "../services/BackendService";
 import Message from "../components/Message/Message";
 

@@ -5,12 +5,10 @@ import { withAsyncAction } from "../../redux/HOCs";
 import Dreddit from './redditLogo.png'
 
 class Menu extends React.Component {
+  this.state{};
   handleLogout = event => {
     event.preventDefault();
     this.props.logout();
-    this.state = {
-      username: ""
-    }
   };
 
   render() {
@@ -23,7 +21,7 @@ class Menu extends React.Component {
             <Link to="/" onClick={this.handleLogout}>
               Logout
             </Link>
-            
+            <Link to="/profile/">Profile</Link>
           </div>
         )}
       </div>

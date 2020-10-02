@@ -8,9 +8,6 @@ class Menu extends React.Component {
   handleLogout = event => {
     event.preventDefault();
     this.props.logout();
-    this.state = {
-      username: ""
-    }
   };
 
   render() {
@@ -23,7 +20,7 @@ class Menu extends React.Component {
             <Link to="/" onClick={this.handleLogout}>
               Logout
             </Link>
-            
+            <Link to="/profile/{">Profile</Link>
           </div>
         )}
       </div>
